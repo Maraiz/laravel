@@ -23,3 +23,5 @@ Route::post('/insertdata',[AbsenController::class, 'insertdata'])->name('insertd
 
 Route::get('/editdata/{id}',[AbsenController::class, 'editdata'])->name('editdata');
 Route::post('/updatedata/{id}',[AbsenController::class, 'updatedata'])->name('updatedata');
+
+Route::get('/delete/{id}',[AbsenController::class, 'delete'])->name('delete');

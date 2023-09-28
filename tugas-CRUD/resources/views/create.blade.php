@@ -59,8 +59,8 @@
         <input type="text" name="nama" required><br><br>
         <label>NIM :</label>
         <input type="text" name="nim" required><br><br>
-        <label>Foto</label>
-        <input type="text" name="foto">
+        <label>Masukan Foto</label>
+        <input type="file" name="foto">
         <button type="submit">Submit</button>
     </form>
 </body>

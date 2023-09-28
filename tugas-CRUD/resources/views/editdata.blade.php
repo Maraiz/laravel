@@ -60,7 +60,7 @@
         <label>NIM :</label>
         <input type="text" name="nim" value="{{$data->nim}}" required><br><br>
         <label>Foto</label>
-        <input type="text" name="foto" value="{{$data->foto}}">
+        <input type="file" name="foto" value="{{$data->foto}}">
         <button type="submit">Submit</button>
     </form>
 </body>

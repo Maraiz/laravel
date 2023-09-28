@@ -97,15 +97,21 @@
             <th>Aksi</th>
         </tr>
 
+        @php
+            $no = 1;
+        @endphp
+
         @foreach ($data as $row)
         <tr>
-            <td>{{$row->id}}</td>
+            <td>{{$no++}}</td>
             <td>{{$row->nama}}</td>
             <td>{{$row->nim}}</td>
-            <td>{{$row->foto}}</td>
+            <td>
+                <img src="{{ asset('fotopegawai/'.$row->foto) }}" alt="" style="width: 100px;">
+            </td>
             <td>
             <a href="/editdata/{{$row->id}}" class="btn">Edit</a>
-            <a href="" class="btn1">Hapus</a>
+            <a href="/delete/{{$row->id}}" class="btn1">Hapus</a>
             </td>
         </tr>
         @endforeach
