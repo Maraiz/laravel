@@ -81,9 +81,12 @@
     <body>
     
     <div class="header-container">
-        <h2>Data Buku</h2>
-        <a href="" class="add-link">Tambah</a>
+        <h2>Data Pegawai</h2>
+        <a href="/create" class="add-link">Tambah</a>
     </div>
+    @if ($message = Session::get('success'));
+        {{$message}}
+      @endif
 
     <table>
         <tr>

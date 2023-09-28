@@ -17,4 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/absen',[AbsenController::class, 'index'])->name('absen');
+Route::get('/absensi',[AbsenController::class, 'index'])->name('absensi');
+Route::get('/create',[AbsenController::class, 'create'])->name('create');
+Route::post('/insertdata',[AbsenController::class, 'insertdata'])->name('insertdata');
