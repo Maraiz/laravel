@@ -9,7 +9,7 @@ class AbsenController extends Controller
 {
     public function index(){
 
-        $data = absens::all();
+        $data = Absens::all();
         return view ('absensi',compact('data'));
     }
 
@@ -21,5 +21,19 @@ class AbsenController extends Controller
         //dd($request->all());
         Absens::create($request->all());
         return redirect()->route('absensi')->with('success','Data Berhasil Di Tambahkan');
+    }
+
+    public function editdata($id){
+
+        $data = Absens::find($id);
+        //dd($data);
+
+       return view('editdata', compact('data'));
+    }
+
+    public function updatedata(Request $request, $id){
+        $data = Absens::find($id);
+        $data->update($request->all());
+        return redirect()->route('absensi')->with('success','Data Berhasil Di Ubah');
     }
 }

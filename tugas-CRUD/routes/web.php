@@ -20,3 +20,6 @@ Route::get('/', function () {
 Route::get('/absensi',[AbsenController::class, 'index'])->name('absensi');
 Route::get('/create',[AbsenController::class, 'create'])->name('create');
 Route::post('/insertdata',[AbsenController::class, 'insertdata'])->name('insertdata');
+
+Route::get('/editdata/{id}',[AbsenController::class, 'editdata'])->name('editdata');
+Route::post('/updatedata/{id}',[AbsenController::class, 'updatedata'])->name('updatedata');

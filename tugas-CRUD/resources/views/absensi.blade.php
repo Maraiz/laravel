@@ -82,7 +82,7 @@
     
     <div class="header-container">
         <h2>Data Pegawai</h2>
-        <a href="/create" class="add-link">Tambah</a>
+        <a href="/create" class="add-link">Tambah Data</a>
     </div>
     @if ($message = Session::get('success'));
         {{$message}}
@@ -104,7 +104,7 @@
             <td>{{$row->nim}}</td>
             <td>{{$row->foto}}</td>
             <td>
-            <a href="" class="btn">Edit</a>
+            <a href="/editdata/{{$row->id}}" class="btn">Edit</a>
             <a href="" class="btn1">Hapus</a>
             </td>
         </tr>
